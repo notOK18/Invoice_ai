@@ -1,0 +1,12 @@
+{
+  "invoice_number": "12345",
+  "invoice_date": "2024-08-01",
+  "total_amount": "634.73",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [],
+  "review_required": false,
+  "raw_text": "Invoice\nCraigs' Landscaping\n123-456-7890\n123 Sierra Dr\ncraigslandscaping@email.com\nPalo Alto, CA 94028\ncraigslandscaping:com\nBill To\nInvoice Details\nSmith Enterprises\nInvoice # 12345\n456 Sierra Dr\nTerms Net 30\nPalo Alto, CA 94028\nInvoice date 08/01/2024\nDue date 08/31/2024\nProduct/Services\nQty/Hrs\nRate\nAmount\nStone work\n3.4\nS125\nS425\nMulching, weeding,\nS75\nS225\nplanting\nSubtotal\nS650.00\nDiscount\nS65.00\nTax 8.5%\n549.73\nTotal\nS634.73\nIntuit\nquickbooks",
+  "source_path": "data/invoices/invoice2.avif",
+  "corrections": {}
+}

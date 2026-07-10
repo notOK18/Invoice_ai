@@ -1,0 +1,19 @@
+{
+  "invoice_number": "998",
+  "invoice_date": "2025-03-22",
+  "total_amount": "209.00",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 2,
+      "description": "Hours",
+      "unit_price": "100.00",
+      "line_total": "200.00"
+    }
+  ],
+  "review_required": false,
+  "raw_text": "INV24_COM\nDMLINE LNYDICING S@FTIARE\nSELLER\n[Your Company Name]\n[Your Company Address Line 1]\nINVOICE\n[Your Company Address Line 2]\n[Your Phone Number]\nBILL TO\nInvoice Number:\n998\n[Client's Company Name]\nInvoice Date:\n03/22/2025\n[Client's Company Address Line 1]\nDue Date:\n04/21/2025\n[Client's Company Address Line 2]\nDESCRIPTION\nQTY\nUNIT PRICE\nSUBTOTAL\nTAX\nMy Services\n2 Hours\n100.00\n200.00\n20.00\nDiscount\n-10.00\n-I0.00\n-1.00\nSubtotal\n$190.00\nTax (10%)\n$19.00\nTWO HUNDRED NINE USD AND 00 CENTS\nTotal\nS209.00\n[Your Payment Details Line 1]\n[Your Payment Details Line 2]\n[Your Payment Details Line 3]\nTHANK YOUI",
+  "source_path": "data/invoices/invoice3.jpg",
+  "corrections": {}
+}

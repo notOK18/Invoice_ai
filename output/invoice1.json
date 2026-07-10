@@ -1,0 +1,19 @@
+{
+  "invoice_number": "US-001",
+  "invoice_date": "2019-11-02",
+  "total_amount": "154.06",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "New set of pedal arms",
+      "unit_price": "15.00",
+      "line_total": "30.00"
+    }
+  ],
+  "review_required": false,
+  "raw_text": "INVOICE\nLOGO\nEast Repair Inc:\n1912 Harvest Lane\nNew York; NY 12210\nBILL TO\nSHIP TO\nINVOICE #\nUS-001\nJohn Smith\nJohn Smith\nINVOICE DATE\n11/02/2019\n2 Court Square\n3787 Pineview Drive\nPO.#\n2312/2019\nNew York; NY 12210\nCambridge\nMA 12210\nDUE DATE\n26/02/2019\nQTY\nDESCRIPTION\nUNIT PRICE\nAMOUNT\nFront and rear brake cables\n100.00\n100.00\nNew set of pedal arms\n15.00\n30.00\nLabor 3hrs\n5.00\n15.00\nSublotal\n145.00\nSales Tax 6.25%\n9.06\nTOTAL\nS154.06\nTmSwh\nTERMS & CONDITIONS\nPayment is due within 15 days\nUhank ycul\nPlease make checks payable to: East Repair Inc,",
+  "source_path": "data/invoices/invoice1.png",
+  "corrections": {}
+}
