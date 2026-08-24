@@ -1,0 +1,11 @@
+{
+  "source": "invoice1.png",
+  "invoice_number": "US-001",
+  "fields": {
+    "invoice_number": "US-001",
+    "invoice_date": "2019-11-02",
+    "total_amount": "154.06",
+    "supplier": null,
+    "currency": "USD"
+  }
+}

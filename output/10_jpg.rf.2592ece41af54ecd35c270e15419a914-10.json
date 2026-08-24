@@ -1,0 +1,46 @@
+{
+  "invoice_number": "2020-1010",
+  "invoice_date": "19.09.2020",
+  "total_amount": "378,50",
+  "supplier": "Mustermann",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 42,
+      "description": "1234",
+      "unit_price": "1234.1234",
+      "line_total": "1234"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.901,
+    "invoice_date": 0.474,
+    "total_amount": 0.854,
+    "supplier": 0.711,
+    "currency": 0.854,
+    "line_items": 0.664
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "Dein\nLogo:\nMusterfirma - MusterstraBe 7 - 01563 Hannover\nHerr\nMax Mustermann\nRechnungsdatum:\n19.09.2020\nMusterstr: 7\nLeistungsdatum:\n19.09.2020\n30169 Hannover\nKundennr::\nK-11210\nFalligkeitsdatum:\n19.10.2020\nRechnung Nr. 2020-1010\nSehr geehrter Herr Mustermann,\nvielen Dank fir Ihren Auftrag!\nWir haben gerne mit Ihnen\nzusammengearbeitet .\nBeschreibung\nMenge\nEinheit\nMwSt\nEinzelpreis\nGesamtprcis\nPos\nStk:\n16%\n100,00 \u20ac\n100,00 \u20ac\nTestprodukt\nStk:\n5%\n250,00 \u20ac\n250,00 \u20ac\nTestprodukt 2\nNettobetrag\n350,00 \u20ac\nizgl:. 5,0k MwSt:\n12,50 \u20ac\nzzgl. 16.0% MwSt:\n16,00 \u20ac\nGesamtbetrag\n378,50 \u20ac\nBitte zahlen Sie die Rechnung bis zum oben\nangegebenen Falligkeitsdatum\nFreundliche GriBe / Best regards\nMusterfirma\nMusterfirma\nKontaktinformationen\nBankverbindung\nMusterstraBe 7\nMax Mustermann\nMax  Mustermann\n01563 Hannover\nTel: 0179 1234567\nMusterbank\nEmail; info@ihre-firma de\nIBAN\nDE42 1234 1234.1234 1234 02\nDeutschland\nUst ld-Nr: DE123456789\nWWwihr-unternehmen de\nBIC\nDEHHCXXIQOI",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/10_jpg.rf.2592ece41af54ecd35c270e15419a914-10.jpg",
+  "corrections": {
+    "source": "10_jpg.rf.2592ece41af54ecd35c270e15419a914-2.jpg",
+    "invoice_number": "2020-1010",
+    "fields": {
+      "invoice_number": "2020-1010",
+      "invoice_date": "19.09.2020",
+      "total_amount": "378,50",
+      "supplier": "Mustermann",
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.8532464325496709
+}

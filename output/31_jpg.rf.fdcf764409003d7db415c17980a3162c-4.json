@@ -1,0 +1,48 @@
+{
+  "invoice_number": "00135",
+  "invoice_date": "4/10/2018",
+  "total_amount": "3010",
+  "supplier": "Steel Bear Ltd.",
+  "currency": "CAD",
+  "line_items": [
+    {
+      "quantity": 70,
+      "description": "Q0",
+      "unit_price": "350",
+      "line_total": "00"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.813,
+    "invoice_date": 0.428,
+    "total_amount": 0.77,
+    "supplier": 0.642,
+    "currency": 0.77,
+    "line_items": 0.599
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "Steel Bear Ltd.\nPurchase Order\nPurchase Order #: PO-SteelBearLtd -\n00135\nBILLED TO\nSteel Bear Productions Ltd\nDate Issued: October _\n2018\n2200 Katimavik Road, Suite 20I\nCreated on: October\n2018 I551 pm\nOttawa, Ontario\nCreated b;: Logan\nKZL IWS\nStatus: Issued\nCanada\nVENDOR\nDELIVERY ADDRESS\nSteel\nKanala Branch\nOfice\nFunley Fety\n2200 Katimavik Road, Suile 201\n74 Moulton Road\nOUlaWz, Ontario\nGwaenysgor\nKZL IWS\nLLIS ZYF\nCanadu\nUniled Kingdom\nDetails\nUnit\nUnit Frice\nSuhtotul\nS1J56 BEss Pipes\nFpes -\n70 Q0\n350 00\n27284 Bronzc Burs\nBar, cuch\n250_Qu\n2500.001\nJ0 ?H4JW Hot Ro Stec [ Bars\nBurs $ pCs\n320U\n16u UU\nTOTAL;\nCAD SJ,010,\u20ac\nTerms & Conditions:\nYour negotiations and agreement t0 do business are conditioned on vour accepiance of and compliance\nthese Terms . These Terms apply to all business contacts who interact with Steel Bear Productions Ltd_for the\npurpose of commerce\nFrice\nParugon\nMtetu\nWith",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/31_jpg.rf.fdcf764409003d7db415c17980a3162c-4.jpg",
+  "corrections": {
+    "source": "31_jpg.rf.fdcf764409003d7db415c17980a3162c.jpg",
+    "invoice_number": "00135",
+    "fields": {
+      "invoice_number": "00135",
+      "invoice_date": "4/10/2018",
+      "total_amount": "3010",
+      "supplier": "Steel Bear Ltd.",
+      "currency": "CAD"
+    },
+    "fingerprint": "0856378627db210e16ac75b47f4da1f320e1744a"
+  },
+  "learned": true,
+  "ocr_confidence": 0.5878720664053325,
+  "total_is_guess": false
+}

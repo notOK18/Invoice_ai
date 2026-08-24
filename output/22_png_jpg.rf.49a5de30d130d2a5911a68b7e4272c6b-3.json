@@ -1,0 +1,39 @@
+{
+  "invoice_number": "00121",
+  "invoice_date": "8/04/2015",
+  "total_amount": "270.00",
+  "supplier": "Zylkar Corporation",
+  "currency": null,
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.0,
+    "line_items": 0.3
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "currency missing",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "ZYLKAR CORPORATION\nInvoice\n#0012|\n156/ Applovlow Town\nStreot\nChicago\nI 60-444\nBill To;\nAlistair Burke\n1156 High Stroot\nGantu\nCnz\nCalilomia\n95064\nIn01ce\nLaIE\nTerms\nDue Date\nApril\n7015\n30 days\nMay\n2015\nOcecrodon\nOty\nUnlt Price\nmnount\nArochune\nDesign\n1-00\n50.00\n50.00\nPamphlet Desien\n100.00\nWeb Baret DJatsign\nIJ0OO\n120.00\nTotal\n270.00\nThank you for your business\nPayment Options\nBank Account: 7102381318-449\nPAnK\nChicago\nPayPal email\naddross\nDavmontsezulkarcord\ncon\nBarers",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/22_png_jpg.rf.49a5de30d130d2a5911a68b7e4272c6b-3.jpg",
+  "corrections": {
+    "source": "22_png_jpg.rf.49a5de30d130d2a5911a68b7e4272c6b-3.jpg",
+    "fields": {
+      "invoice_number": "00121",
+      "invoice_date": "8/04/2015",
+      "total_amount": "270.00",
+      "supplier": "Zylkar Corporation",
+      "currency": null
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.6132512114833507
+}

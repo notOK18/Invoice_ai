@@ -1,0 +1,55 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 1,
+      "description": "L",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "8",
+      "unit_price": "209",
+      "line_total": "1"
+    },
+    {
+      "quantity": 4,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "30"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.226,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.769,
+    "line_items": 0.855
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing"
+  ],
+  "raw_text": "1\n1\n1\nDsnrcuiguq\nBIC\nDEHHCXXTOOT\n1\n[\n1\nIBVV\n1\nIst\n'OTJa 153201'\n1\n[\n1\n1\n1\nnsnoitbrmotniixstnox\n1\nL\n1\n1\n3\n|\n|\n1\n1\n]\n1\n1\n1\nJ\na61f9dottsh ,\n1\n]\n2K\n02\n520*00 \u20ac\n1\n8\n209\n1\n4\n1\n1\n1\n1\n7\n[\n1\n1\n7\n|\n1\n1\n1\n30tea HIUUOAGL\nInnsbnux\n1\n1\nT.I219t2UM'\nOsOSeo.ef\n1\nXsM\nWO?{GLWgUU\nOSOS eo.ef\nHsit\n|\n8\n8",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/10_jpg.rf.44dc58005c6622aaef3cb98da413198a-8.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.584869688508019
+}

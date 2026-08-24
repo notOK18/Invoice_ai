@@ -1,0 +1,49 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": "13,715.52",
+  "supplier": "Ship",
+  "currency": "INR",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "Gundhimouse Dad",
+      "unit_price": "99.00",
+      "line_total": "297"
+    },
+    {
+      "quantity": 0,
+      "description": "Subtotal",
+      "unit_price": "17",
+      "line_total": ",46"
+    },
+    {
+      "quantity": 0,
+      "description": "GST",
+      "unit_price": "12",
+      "line_total": "0"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.468,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.746,
+    "supplier": 0.621,
+    "currency": 0.746,
+    "line_items": 0.746
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "line-item totals do not match the invoice total"
+  ],
+  "raw_text": "Saffron\nDesign\nNamutala\nDuiki Dalni40 0077\nBill To\nShip\nInvoice\nMhtado ]\nKaundm\nMannan\nKacnnre\nRAntan\nInvolce Dale\n29/01/2018\n27DII City. Cupta\n264\nAbdul Rehman\nRO.\n2430/2019\nDulhi\nDelni-0003\nMumbai . Bihar 40009\nDue Date\n26004/019\nDescription\nUnit\nPric\nAmolini\nFrontano\ndasign roatnucturo\n9.599.00\nAninn\n{uxa\ncon packane\n975.00\n1,950.00\nGundhimouse Dad\n99.00\n297-00\nSubtotal\n17 ,46 00\nGST 12 0%\n469,52\nInvoice Total\n{13,715.52\nFrChp)\nTerms\nCono-ions\nPaymeni\ndus *thin\ndaya\nSllu Dank\nIndia\nOcCom\nNumber;\nTde\nRoulina Number\n0n876543710",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/106_png_jpg.rf.5aeb0edc1f1462b4eade633899b9b452.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.5099303688860214,
+  "total_is_guess": false
+}

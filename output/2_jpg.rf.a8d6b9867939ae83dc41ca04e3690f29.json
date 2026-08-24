@@ -1,0 +1,41 @@
+{
+  "invoice_number": "47",
+  "invoice_date": "12, 11, 2021",
+  "total_amount": "0",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.733,
+    "invoice_date": 0.386,
+    "total_amount": 0.695,
+    "supplier": 0.0,
+    "currency": 0.695,
+    "line_items": 0.232
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "supplier missing",
+    "no line items detected",
+    "low OCR confidence (0.35)",
+    "matched a saved correction"
+  ],
+  "raw_text": "A31OVMI\nJa3h JMAM YMAGMO) AuoY\nTA.ol:\nTSOS TT.FI st6a\n919d am6r 1UoY\n919d 2221bbA:\nsrr6ri enibliug\nvijnuo?\nJATOT\n33i99\nMOIT9IA3z3\n0o,0S2\n0o.0s2\neisd oitqjin2ob IoY\n00.0S2\n0o.082\n9191 noitqi132ab iuoY\n00.0S2\n00.0s2\nsi9d roitqibzob\n00.002\nJATOTAUZ\n00.002\nXAT\nOo.0o?.\nJATOT\nborljeM friemivsq\nerorq\noq:trUo33A\no1\nb16319t26M ,B2iV\nTza reg.324 (A2)\n8284rgeazzs\nS1e1 Sinsh\nJuOY",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/2_jpg.rf.a8d6b9867939ae83dc41ca04e3690f29.jpg",
+  "corrections": {
+    "source": "2_jpg.rf.a8d6b9867939ae83dc41ca04e3690f29.jpg",
+    "invoice_number": "47",
+    "fields": {
+      "invoice_number": "47",
+      "invoice_date": "12, 11, 2021",
+      "total_amount": "0",
+      "supplier": null,
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.3477989008320615
+}

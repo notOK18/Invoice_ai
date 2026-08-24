@@ -1,0 +1,12 @@
+{
+  "source": "31_jpg.rf.fdcf764409003d7db415c17980a3162c.jpg",
+  "invoice_number": "00135",
+  "fields": {
+    "invoice_number": "00135",
+    "invoice_date": "4/10/2018",
+    "total_amount": "3010",
+    "supplier": "Steel Bear Ltd.",
+    "currency": "CAD"
+  },
+  "fingerprint": "0856378627db210e16ac75b47f4da1f320e1744a"
+}

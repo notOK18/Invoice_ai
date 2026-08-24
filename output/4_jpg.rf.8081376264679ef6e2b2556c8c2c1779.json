@@ -1,0 +1,48 @@
+{
+  "invoice_number": "2021.0001",
+  "invoice_date": "1, 1, 2021",
+  "total_amount": "83.221",
+  "supplier": "96sy invoice",
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 18,
+      "description": "A9F",
+      "unit_price": "2103",
+      "line_total": "2"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.381,
+    "invoice_date": 0.381,
+    "total_amount": 0.686,
+    "supplier": 0.572,
+    "currency": 0.686,
+    "line_items": 0.534
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_number format unusual",
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "low OCR confidence (0.32)",
+    "matched a saved correction"
+  ],
+  "raw_text": "bgA ^onL IUOICG MfHIU J2\niofgp:\n#TSs 38.\n2+'0e\n^9gf\n28'18\nA9F\n2103  2+\nznpfotgi: .\n#+I 80\n210'42\n233*8]\n4e] 'Jt\n162s\n'162f].\nGnguflA\nbLoqacte\nIuaoice D9{G: T I\"Sooo\nS2e4ccorucueurcita\nIUAOycOinlpgi; Sost Ooot\nCIIGURZELGGE t2e\nCileuf coib\n2gubiGconuLA\n1S3+ VB'\nzgubiGfomu\nzgwbig\nJS3\n2gwb16\nQUAOICG\nIVAOICE\nq9A?'\nKlUGIA\nDBVX\neolo:\nSTolo:\nLof9|\nblice\nZALGGE\nCOLb\n6g2)",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/4_jpg.rf.8081376264679ef6e2b2556c8c2c1779.jpg",
+  "corrections": {
+    "source": "4_jpg.rf.8081376264679ef6e2b2556c8c2c1779.jpg",
+    "invoice_number": "2021.0001",
+    "fields": {
+      "invoice_number": "2021.0001",
+      "invoice_date": "1, 1, 2021",
+      "total_amount": "83.221",
+      "supplier": "96sy invoice",
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.32215792266616916
+}

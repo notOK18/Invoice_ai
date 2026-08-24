@@ -1,0 +1,48 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": "223.12",
+  "supplier": "Supershop Zambrowsky",
+  "currency": "Euro",
+  "line_items": [
+    {
+      "quantity": 3,
+      "description": "Sricimijubei",
+      "unit_price": "133",
+      "line_total": "235"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.64,
+    "supplier": 0.533,
+    "currency": 0.64,
+    "line_items": 0.498
+  },
+  "route": "review",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "line-item totals do not match the invoice total",
+    "low OCR confidence (0.17)",
+    "matched a saved correction"
+  ],
+  "raw_text": "Supershop Zambrowsky\nSItAnnat i=\nHauplztnce &\nT2Hu4aic\nSh|he\nKark Sukop\n01344\n13407\nDetarm 70\nTrousupar zambneonydc\neupor ?oMbicwin\n1J80J 3pielhauzen\nRechnung\nRethntngsnurimer\nZoc7c61z34\nRechnlngsdatum\n12.06 Z0dT\nWricctcn Inicn\ntealk\nEezeicrnung\nEnzeipreis\nJesamt &\nSKG\netbank Glna\n14d0\n2J0,00\n1S_73\nKanottelsalac (COUO\nX-Wu_U\n\"andkoztenSramoju\n45,j0\nHL0i\nRecnnungsbeteg\n9i4 -\nNcor  nyouzi\n4aJ\"\nMcnnyertsicusr\nciljttao\n221,12\n7Aunisari Vukss\nAoesanmem\nWanenc\nErhafen\n302n ciclit =\npamaual\nKecimungcen\nSetam =FM\nD8 Livening fIIgt ausschha Bct\nloeMoinan\nGoschamain Argngon (AGC1\nEuecdteiiccdi\nWdolDEeoi\n~Mblct:\nFF3 Sricimijubei\n133 235\n3LZ cC[ 0i d1\nKomo 1sa7/8\nMetje\n0,749\n|",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/9_jpg.rf.9d00f2737a152b7e6838359d338089f0.jpg",
+  "corrections": {
+    "source": "9_jpg.rf.9d00f2737a152b7e6838359d338089f0.jpg",
+    "invoice_number": null,
+    "fields": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "total_amount": "223.12",
+      "supplier": "Supershop Zambrowsky",
+      "currency": "Euro"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.17355481150148935
+}

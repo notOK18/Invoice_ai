@@ -1,0 +1,32 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.135,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.677,
+    "line_items": 0.226
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing",
+    "no line items detected",
+    "low OCR confidence (0.29)"
+  ],
+  "raw_text": "nzriq-W\": DETS3rzesga\nMM\n\"Iul-Qucglueulsuq6\nDsnrcuiguq\nBIC\nDEHHCXXTOOT\nEl9 :\nWiooikle-ulls q6\nOtze3 HIuuoasL\nLsl\"\nIBVV\n'DEvJ T53# TJ3+ J53+ Tj3v 03\n'OTJa 153201'\nwnzrezaggs\nWnzrslpguk\nWIX Wnzislluquu\nWnzIeLuuusg\nW9x WnzIGllguu\nKoutekhuiolujghousu\nBoukaGLpiuqQUE\nWn?IGLLILW?\nElGnuqiicis @LQB6\nB62f\nLs89lqz\nBIIe Ispigu 2i6 qi6 BGcHunub pi? Inw opsu\nGuBeBspsusu E?Ili8ksireqstniy\"\n@EZ3WIPeflss\nFBI\" Je Ose WmZE\"\n318*20 \u20ac\nJe oo \u20ac\nF8y\" 2*08 WM2F\"\n15 20 \u20ac\nIGztbloqnki >\n'V6HOpe[L98\nJG2rbloqnKf\n2K\n288\n320*00 \u20ac\n520*00 \u20ac\nS20*00 \u20ac\nbo3\nBGZcHLGIpnus\nZck'\nJese\nWGueg  Eiupgy\nJOO*00 \u20ac\nJOO 00 \u20ac\nWM2I\nElUsejbiei?\n@Gz51urbiGi?\nMiL p9p6u BGLu6 WJIf Ipusu\nInzguwsuBsglpsisf\nNGisu Dguk IQi IpLGU Vnkfl98;\nZGpl Begpusi Hsli Wnzisliuguu'\nKGcpunue Mi: SosO-TOTO\nE!iliekeirzqgtnw:\n30tea HIUUOAGL\nKnugGuul\"\nJa JO SosO\nWnZ[GLZ' J\nrGizrnuBzqsraw:\nk-JISIO\nW9X\nJa 0a\"SOsO\nWO?{GLWgUU\nKGcjuunuezqgrnw:\nHsit\nJa 0a\"SOsO:\nWnzGlilg - WnzIsizflggs ] - 0Tze3 Hguuoasi\nro8o.\nDGIU",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/10_jpg.rf.44dc58005c6622aaef3cb98da413198a-3.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.2916297707822323
+}

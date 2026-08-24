@@ -1,0 +1,11 @@
+{
+  "source": "26_png_jpg.rf.50ec0d55ad8f089eb8a4c64f0a38e33b.jpg",
+  "invoice_number": "13579",
+  "fields": {
+    "invoice_number": "13579",
+    "invoice_date": "1/07/2020",
+    "total_amount": "650",
+    "supplier": "the write life",
+    "currency": "USD"
+  }
+}

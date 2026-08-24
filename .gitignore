@@ -1,0 +1,25 @@
+# Virtual environment (1 GB, rebuilt from requirements.txt)
+.venv/
+
+# Downloaded datasets - large and re-fetchable, not project source
+Receipt or Invoice.v1i.folder/
+Receipt or Invoice.v1i.folder.zip
+*.zip
+ml/data/
+
+# Invoice files themselves. The database records their OCR text, but the
+# documents are not source and can be re-uploaded; keeping them out also keeps
+# the repo small.
+data/invoices/*
+!data/invoices/invoice1.png
+!data/invoices/invoice2.avif
+!data/invoices/invoice3.jpg
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# macOS
+.DS_Store

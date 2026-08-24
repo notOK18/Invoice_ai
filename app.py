@@ -22,6 +22,7 @@ def main() -> None:
         return
 
     processed_count = 0
+    route_counts: dict[str, int] = {}
     for invoice_path in invoice_files:
         try:
             invoice = processor.process_invoice_file(invoice_path)
@@ -32,9 +33,18 @@ def main() -> None:
         output_path = output_dir / f"{invoice_path.stem}.json"
         processor.save_result(invoice, output_path)
         processed_count += 1
-        print(f"Processed {invoice_path.name} -> {output_path}")
+        route_counts[invoice.route] = route_counts.get(invoice.route, 0) + 1
 
-    print(f"Finished processing {processed_count} invoice(s)")
+        reasons = f"  ({'; '.join(invoice.review_reasons)})" if invoice.review_reasons else ""
+        print(
+            f"Processed {invoice_path.name} -> {output_path} "
+            f"[{invoice.route}, confidence {invoice.confidence:.2f}]{reasons}"
+        )
+
+    print(f"\nFinished processing {processed_count} invoice(s)")
+    if route_counts:
+        summary = ", ".join(f"{count} {route}" for route, count in sorted(route_counts.items()))
+        print(f"Routing summary: {summary}")
 
 
 if __name__ == "__main__":

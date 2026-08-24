@@ -1,0 +1,11 @@
+{
+  "source": "29_jpg.rf.d81bd30ecf5e588233d70c2af59116f7.jpg",
+  "invoice_number": "PO00495",
+  "fields": {
+    "invoice_number": "PO00495",
+    "invoice_date": "04/26/2017",
+    "total_amount": "5228.47",
+    "supplier": "Taylor Dickens",
+    "currency": "USD"
+  }
+}

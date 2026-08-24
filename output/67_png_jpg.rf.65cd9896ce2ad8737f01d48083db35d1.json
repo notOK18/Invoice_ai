@@ -1,0 +1,43 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 999,
+      "description": "00",
+      "unit_price": "9",
+      "line_total": "999"
+    },
+    {
+      "quantity": 0,
+      "description": "Gundhi mousc pad",
+      "unit_price": "99.00",
+      "line_total": "297.00"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.201,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.754,
+    "line_items": 0.671
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing"
+  ],
+  "raw_text": "Saffron Design\nNamrale\nBlu\nDclni\nDeihi 40007t\nShip\nnyoice\nIRL0O 1\nKavindn Mannan\nKavindr Mannan\nInvoicu\nDale\n79/017019\n27 . Dlt City, Gupta\nAbdul Rehman\nPo#\n74307019\nDelhi, Delhi 40003\nMumbai; Bihar 40009\nDate\n20047019\nQty\nDescription\nUnit Price\nAmount\netcntcng\ndesianregtruclure\n999 00\n9 999 00\nCuston\nicon packaoc\n975.00\n4950,00\nGundhi mousc pad\n99.00\n297.00\nsubtotal\n12.246,00\nCST\nAGgD\nInvoice\nTotal\n{13,715.52\nRlhpa)\nTERMS\nCONDITIONS\nPaynuni\nduu wilnen\nduyb\nSlatc Bank\nIndh\naccount Numbur\n2345678\nRouting\nFlEAr\n09878543210",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/67_png_jpg.rf.65cd9896ce2ad8737f01d48083db35d1.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.5375152811250088
+}

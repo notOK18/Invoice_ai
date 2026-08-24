@@ -1,0 +1,11 @@
+{
+  "source": "9_jpg.rf.9d00f2737a152b7e6838359d338089f0.jpg",
+  "invoice_number": null,
+  "fields": {
+    "invoice_number": null,
+    "invoice_date": null,
+    "total_amount": "223.12",
+    "supplier": "Supershop Zambrowsky",
+    "currency": "Euro"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": "13,715.52",
+  "supplier": "shlp",
+  "currency": "INR",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "Guhioal",
+      "unit_price": "17",
+      "line_total": "746"
+    },
+    {
+      "quantity": 0,
+      "description": "GST",
+      "unit_price": "1",
+      "line_total": "46942"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.436,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.709,
+    "supplier": 0.591,
+    "currency": 0.709,
+    "line_items": 0.63
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "line-item totals do not match the invoice total",
+    "low OCR confidence (0.39)"
+  ],
+  "raw_text": "Saffron Design\nINVOICE\nNamnta @rdg\nueni\n@ni 4umm{\nBill To\nshlp\nInvolcu\nIa-nnd\nKavindns\nMannan\nKauindr\nMannan\nUnuoico\nDat\n295010019\nDIi Ciy\nCupta\n264,\nAbdul Rehman\nP0.#\n743077019\nDelni; Delhi 40003\nMumhai\nBinar 40009\nDatc\n20/04/2019\nDESGRiPTOR\nMRET\nPRICE\nAMOUAT\nFrontend dosign {#8iruciliir\n9,999.DO\n9,99g-00\nCustomican\nDackane\nO7EOn\n950 0O\nCandhi mouse\n99 00\n297.00\nGuhioal\n17 746 00\nGST\n1 46942\nTOTAL\n{13,715.52\n#R-Chpa)\nTerma\nConditions\nPaymant\ndale Lnin\ndnya\nSuic Bank\nIndiz\nAccount Numbor: 1234*678\nRouting Number 09876343210",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/43_png_jpg.rf.0430ea2aabaa1a6ec961a7e25be7d133.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.39392585544974057,
+  "total_is_guess": false
+}

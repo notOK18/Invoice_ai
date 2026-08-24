@@ -1,0 +1,31 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": "[Company Name]",
+  "currency": null,
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.141,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.676,
+    "currency": 0.0,
+    "line_items": 0.271
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "currency missing",
+    "no line items detected"
+  ],
+  "raw_text": "INVOICE\nYoUR LoCo\nHERE\n[Comparty slogan here]\nDATE:\nIMVOICE:\nFROM:\n[Company Name]\n[Company Name]\n[Email]\n(Email}\n[Address !]*\n[Address .1]\"\n[Address 2]\n[Addrress 2]:\n[Phone]\n[Phore]\nTERMS:\n[Payment Tejms] -\nDUE\n[Payment Due Date]\nAmount\nQuantiiy\nPrice\nDescription\nSubtotal:\nTax Rate\n0.00Q%\nTotal Tax\nBALANCE: Due_\nNotes\n[Insert notes]",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/12_jpg.rf.8a4bf70f9d2c383c69406fe2bb39eea4-2.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.7196045497501397
+}

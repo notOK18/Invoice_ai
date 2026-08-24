@@ -1,0 +1,11 @@
+{
+  "source": "22_png_jpg.rf.49a5de30d130d2a5911a68b7e4272c6b-6.jpg",
+  "invoice_number": "00121",
+  "fields": {
+    "invoice_number": "00121",
+    "invoice_date": "2015-04-01",
+    "total_amount": "270.00",
+    "supplier": "Zylkar Corporation",
+    "currency": "USD"
+  }
+}

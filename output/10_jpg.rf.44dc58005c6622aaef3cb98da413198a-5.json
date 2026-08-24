@@ -1,0 +1,63 @@
+{
+  "invoice_number": "2020-1010",
+  "invoice_date": "19.09.2020",
+  "total_amount": "378,50",
+  "supplier": "Mustermann",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 1,
+      "description": "L",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "8",
+      "unit_price": "209",
+      "line_total": "1"
+    },
+    {
+      "quantity": 4,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "30"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 1.0
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "1\n1\n1\nDsnrcuiguq\nBIC\nDEHHCXXTOOT\n1\n[\n1\nIBVV\n1\nIst\n'OTJa 153201'\n1\n[\n1\n1\n1\nnsnoitbrmotniixstnox\n1\nL\n1\n1\n3\n|\n|\n1\n1\n]\n1\n1\n1\nJ\na61f9dottsh ,\n1\n]\n2K\n02\n520*00 \u20ac\n1\n8\n209\n1\n4\n1\n1\n1\n1\n7\n[\n1\n1\n7\n|\n1\n1\n1\n30tea HIUUOAGL\nInnsbnux\n1\n1\nT.I219t2UM'\nOsOSeo.ef\n1\nXsM\nWO?{GLWgUU\nOSOS eo.ef\nHsit\n|\n8\n8",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/10_jpg.rf.44dc58005c6622aaef3cb98da413198a-5.jpg",
+  "corrections": {
+    "source": "10_jpg.rf.44dc58005c6622aaef3cb98da413198a-5.jpg",
+    "fields": {
+      "invoice_number": "2020-1010",
+      "invoice_date": "19.09.2020",
+      "total_amount": "378,50",
+      "supplier": "Mustermann",
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.584869688508019
+}

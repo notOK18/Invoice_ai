@@ -8,12 +8,12 @@
   "review_required": false,
   "confidence": 0.9,
   "field_confidence": {
-    "invoice_number": 0.887,
-    "invoice_date": 0.887,
-    "total_amount": 0.84,
+    "invoice_number": 0.891,
+    "invoice_date": 0.891,
+    "total_amount": 0.844,
     "supplier": 0.0,
-    "currency": 0.84,
-    "line_items": 0.28
+    "currency": 0.844,
+    "line_items": 0.281
   },
   "route": "auto_approve",
   "review_reasons": [
@@ -22,7 +22,7 @@
     "matched a saved correction"
   ],
   "raw_text": "Invoice\nCraigs' Landscaping\n123-456-7890\n123 Sierra Dr\ncraigslandscaping@email.com\nPalo Alto, CA 94028\ncraigslandscaping:com\nBill To\nInvoice Details\nSmith Enterprises\nInvoice # 12345\n456 Sierra Dr\nTerms Net 30\nPalo Alto, CA 94028\nInvoice date 08/01/2024\nDue date 08/31/2024\nProduct/Services\nQty/Hrs\nRate\nAmount\nStone work\n3.4\nS125\nS425\nMulching, weeding,\nS75\nS225\nplanting\nSubtotal\nS650.00\nDiscount\nS65.00\nTax 8.5%\n549.73\nTotal\nS634.73\nIntuit\nquickbooks",
-  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/invoice2.avif",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/example-invoice-image-us-en.avif",
   "corrections": {
     "source": "invoice2.avif",
     "invoice_number": "12345",
@@ -35,5 +35,5 @@
     }
   },
   "learned": true,
-  "ocr_confidence": 0.8095703390185335
+  "ocr_confidence": 0.822581823016712
 }

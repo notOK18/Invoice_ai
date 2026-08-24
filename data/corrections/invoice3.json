@@ -1,0 +1,11 @@
+{
+  "source": "invoice3.jpg",
+  "invoice_number": "998",
+  "fields": {
+    "invoice_number": "998",
+    "invoice_date": "2025-03-22",
+    "total_amount": "209.00",
+    "supplier": "[Your Company Name]",
+    "currency": "USD"
+  }
+}

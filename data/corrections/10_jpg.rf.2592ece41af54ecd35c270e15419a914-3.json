@@ -1,0 +1,11 @@
+{
+  "source": "10_jpg.rf.2592ece41af54ecd35c270e15419a914-3.jpg",
+  "invoice_number": "2020-1010",
+  "fields": {
+    "invoice_number": "2020-1010",
+    "invoice_date": "19.09.2020",
+    "total_amount": "378,50",
+    "supplier": "Mustermann",
+    "currency": "EUR"
+  }
+}

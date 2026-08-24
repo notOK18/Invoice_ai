@@ -1,0 +1,48 @@
+{
+  "invoice_number": "47",
+  "invoice_date": "12, 11, 2021",
+  "total_amount": "0",
+  "supplier": null,
+  "currency": "$",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "LVX",
+      "unit_price": "200.00",
+      "line_total": "20"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.739,
+    "invoice_date": 0.389,
+    "total_amount": 0.7,
+    "supplier": 0.0,
+    "currency": 0.7,
+    "line_items": 0.545
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "supplier missing",
+    "line-item totals do not match the invoice total",
+    "low OCR confidence (0.37)",
+    "matched a saved correction"
+  ],
+  "raw_text": "522ea8 +828\n(3+) Yze ga] eza\nwsarelcsiq\nMgwug\n'Vccoquf UO'\nbuoue\nL9ALGuf Werios\nJo:\nioLvr\n200*00\nLVX\n200.00\n20BiOlvr\n20o*00\nAoni qGzcubfiou UGlG\nZsooo\n250.00.\nAoni qGzcubfiou Uele\nZ5000\n#50*00:\nKoni qozcubfiou\n25000\n250*00\nDEZCBIbLIQn\nbBIcE\n1oiyr\nconurix:\nUgu6\nVaqtezz\nont UgL6 HelG\np9fe jSJSOSI\nVo\nN\nKonb COWbVMX VVWE HEBE\nIMAOICE\nNzg:\nN6LG'\npeie:\nBriiqiua\nNGlG",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/2_jpg.rf.637afd43d00cde95667b7b9214c62b87.jpg",
+  "corrections": {
+    "source": "2_jpg.rf.637afd43d00cde95667b7b9214c62b87.jpg",
+    "invoice_number": "47",
+    "fields": {
+      "invoice_number": "47",
+      "invoice_date": "12, 11, 2021",
+      "total_amount": "0",
+      "supplier": null,
+      "currency": "$"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.36571407062121153
+}

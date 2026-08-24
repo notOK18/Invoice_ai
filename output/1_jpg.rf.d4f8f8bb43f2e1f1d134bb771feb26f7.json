@@ -1,0 +1,39 @@
+{
+  "invoice_number": "596",
+  "invoice_date": "15/02/2022",
+  "total_amount": "170.145",
+  "supplier": "Tagihan Kepada",
+  "currency": "Rp",
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.844,
+    "invoice_date": 0.444,
+    "total_amount": 0.799,
+    "supplier": 0.666,
+    "currency": 0.799,
+    "line_items": 0.266
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "klzdo\nWNVOICE\nINV/00OO7\nTanggal\n15/02/2022\nTgl. Jatuh Tempo\n703/2U22\nTagihan Kepada\nReferensi\nPerum Prabowio Tbk\nPT Kledo Berhati Nyaman\nDk Babah No 596,Banda Aceh 67078,Pabar\nJIDharmawangsa Brt 24,Jawa Timur\nTelp: 622899297628\nTelp: 082383334000\nEmail: gaman wiinarsih@gmail co.id\nEmail: hello@kledo.com\nUp: Artanto Marbun Simbolon\nDeskripsi\nKuantitas\nDiskon\nPajak\nUnit\nJumlah\nMoslem Brown Blue Dress\n109\n199.000\n179.100\nTembilana:\nSubtotal\n199.000\nDiskon\n(Re 19.900_\nSeratus Tujuh Puluh Ribu Seratus Enpai Puluh Lima\nDtskon\nad s\n(Rp 2.955\nIota\nRp 170.145\nPembayaran\nRp 170.145\nDlrerlme\nSiz2 Taqinan\nDengan Hormat,\nPT Kledo Berhati Nyaman\nFinance Dept\nHarga\nRupiah",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/1_jpg.rf.d4f8f8bb43f2e1f1d134bb771feb26f7.jpg",
+  "corrections": {
+    "source": "1_jpg.rf.d4f8f8bb43f2e1f1d134bb771feb26f7.jpg",
+    "invoice_number": "596",
+    "fields": {
+      "invoice_number": "596",
+      "invoice_date": "15/02/2022",
+      "total_amount": "170.145",
+      "supplier": "Tagihan Kepada",
+      "currency": "Rp"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.6803932683336966
+}

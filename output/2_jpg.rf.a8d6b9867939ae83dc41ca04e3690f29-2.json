@@ -1,0 +1,32 @@
+{
+  "invoice_number": null,
+  "invoice_date": "12.71.2027",
+  "total_amount": "520,00",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.292,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.458,
+    "total_amount": 0.275,
+    "supplier": 0.0,
+    "currency": 0.824,
+    "line_items": 0.275
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date could not be normalized",
+    "total_amount is a guess - no pattern matched",
+    "supplier missing",
+    "no line items detected"
+  ],
+  "raw_text": "INVOICE\nYOUR COMPANY NAME HERE\nNc.47\nDate 12.71.2027,\nYour name here\nAddress here\nBuilding name_\nCountry\nDESCRIPTION\nPRICE\nTOTAL\nYour description: here\nS2o.00.\n520,00\nYour description here\ns20.00\n$20.00\nYour description here _\ns20.00\ns20.00\nSUBTOTAL\nsoo.oo\nTAX\nsoo.00\nTOTAL\nSoo.Oo\nTo:\nAccount no.\nPhone\nPayment Method\nNane here\n23569874858\n(341.456.897 657 ,\nVisa, Mastercard",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/2_jpg.rf.a8d6b9867939ae83dc41ca04e3690f29-2.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.7578082997513086,
+  "total_is_guess": true
+}

@@ -1,0 +1,56 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": "235",
+  "supplier": null,
+  "currency": "INR",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "tt bai",
+      "unit_price": "123",
+      "line_total": "1.00"
+    },
+    {
+      "quantity": 0,
+      "description": "162",
+      "unit_price": ".",
+      "line_total": "00"
+    },
+    {
+      "quantity": 0,
+      "description": "t boli",
+      "unit_price": "2.00",
+      "line_total": "15.00"
+    },
+    {
+      "quantity": 53,
+      "description": "SGST",
+      "unit_price": "0",
+      "line_total": "9"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.422,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.822,
+    "supplier": 0.0,
+    "currency": 0.822,
+    "line_items": 0.914
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "supplier missing",
+    "line-item totals do not match the invoice total"
+  ],
+  "raw_text": "NICE\nMART\nSUPER\nMARKET\nDoddaba | apur Ma in Road ,\nNear   CPPF\nYe Iahanka , Bangalore-560064\nGST NO; 29AAnFN8|95L127\nBill NO: 68404\nSep-25-2021\nUser: Administrator\n20;47 ;36\nName\nQTY\nMRP\nRATE\nAMOUNT\nClassmate Nb K\n00\n55.00\n53.00\n53.00\ntt bai\n123\n1.00\n180 . 00\n162 . 00\n162 . 00\nt boli\n2.00\n15.00\n10 .0O\n20 . 00\nYOU HAVE SAVED\nRs\n30. 00\nTota] Item\n3.00\nTotal Qty\n4.00\nPayient  Type\nCash\nCGST\n6x On 19f.91\n71.52\nSGST\n6x Un 191-96\n~11.52\nCGST\n9x On 16.95\n4yus\n1.53\nSGST\n0 9* On 16.95\n1.53\nG\nTotal\n235\n00\nItem\nMAR\nNCE\n2\n8",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/1_png_jpg.rf.46f1d1a0db999212b048ad6e7746dce6.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.7534845177902131,
+  "total_is_guess": false
+}

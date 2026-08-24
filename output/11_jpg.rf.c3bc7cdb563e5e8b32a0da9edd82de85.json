@@ -1,0 +1,32 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": null,
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.034,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.0,
+    "line_items": 0.281
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing",
+    "currency missing",
+    "no line items detected"
+  ],
+  "raw_text": "Invoicing .\nYouf Sales Company Name\nSALES\nTemflatecor\nAddress\nINvOICE\nCity. 'ST ' ZIP Code\nNumber Web Address,\netc -\nDATE:\nINVOICE\nBill To:\nShip To:\nP.o_\nSales Rep. Name\nShip Date\nVia\nTerms:\nDue Date\nProduct ID_\nDescription\nQuantity\nUnit Price\nLine Total\nSUBTOTAL\nState Tax\n7 2590\nDistrict\n1096\nSignature:\n~occ\nSHIPPING & HANDLING\nPAID\nTOTAL DUE\nTHANK YOU FOR YOUR BUSINESS'\nStreet _\nPhone\nShip\nTaxe\nTOTAL",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/11_jpg.rf.c3bc7cdb563e5e8b32a0da9edd82de85.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.8222081034750535
+}

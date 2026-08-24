@@ -1,0 +1,39 @@
+{
+  "invoice_number": "13579",
+  "invoice_date": "1/07/2020",
+  "total_amount": "650",
+  "supplier": "the write life",
+  "currency": "USD",
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.876,
+    "invoice_date": 0.461,
+    "total_amount": 0.83,
+    "supplier": 0.692,
+    "currency": 0.83,
+    "line_items": 0.277
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "THE WRITE LIFE\nTHE\nPo\nBox 12345\nAnywhere\nUS 12345\nWRIte\n123-456-7890\nLIFE\n[eamathewtelite com\nThewrelle com\nTo: CHAD THE CLIENT\n99 Writing Road\nAnywhere\nUS 54321\n098\n65-4321\nchad@chadswebsite com\nChadsWehsitecom\nInvoice #13579\nDelivered: July\n2020\nDUE: July 31, 2020 (30 days aiter receipt)\nService\nDetails\nCost\nArticle on cat trends\n1,200 words\nS500\nSidebar on\n400 words\n5150\nTOTAL\n5650\nPayment Options:\nPaypa\npreferred (email above) or check (address above)\nThanks for your business!\nlook forward t0 working with yOu\nsoon;\ndogs\nagaif",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/26_png_jpg.rf.50ec0d55ad8f089eb8a4c64f0a38e33b-2.jpg",
+  "corrections": {
+    "source": "26_png_jpg.rf.50ec0d55ad8f089eb8a4c64f0a38e33b.jpg",
+    "invoice_number": "13579",
+    "fields": {
+      "invoice_number": "13579",
+      "invoice_date": "1/07/2020",
+      "total_amount": "650",
+      "supplier": "the write life",
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.7772726723338528
+}
