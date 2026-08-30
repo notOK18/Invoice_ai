@@ -52,6 +52,22 @@ A field uses the hand-written heuristic until it has 20+ reviews with at least
 5 of each outcome, and only switches to a learned model if that model beats 0.65
 balanced accuracy on held-out folds. The UI shows which is in use per field.
 
+## Models and technology
+
+This project uses two per-field logistic-regression classifiers (scikit-learn)
+stored in `data/models/` — `invoice_date.joblib` and `supplier.joblib` — each
+predicting the probability that an extracted field will need correcting, trained
+on accept/edit outcomes recorded in `data/invoice_ai.db`, while
+`invoice_number`, `total_amount` and `currency` still fall back to hand-written
+heuristic scores for lack of enough failure examples, and the OCR itself is
+EasyOCR's pretrained CRAFT + CRNN neural network (downloaded to `~/.EasyOCR/`)
+rather than anything trained here.
+
+The stack is Python 3.13 with EasyOCR/PyTorch for text recognition, OpenCV and
+Pillow for image preprocessing, scikit-learn for the confidence models, SQLite
+for the learning store, regular expressions for field extraction, and a
+standard-library HTTP server with plain HTML/JavaScript for the review UI.
+
 ## Layout
 
 | path | role |
