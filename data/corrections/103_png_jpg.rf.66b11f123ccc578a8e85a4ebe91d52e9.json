@@ -1,0 +1,12 @@
+{
+  "source": "103_png_jpg.rf.66b11f123ccc578a8e85a4ebe91d52e9.jpg",
+  "invoice_number": "IN-001",
+  "fingerprint": "bf8f822433013680adacd15f5684b4f004707c04",
+  "fields": {
+    "invoice_number": "IN-001",
+    "invoice_date": "29/01/2019",
+    "total_amount": "13715.00",
+    "supplier": "Pniaya Chopra",
+    "currency": "INR"
+  }
+}

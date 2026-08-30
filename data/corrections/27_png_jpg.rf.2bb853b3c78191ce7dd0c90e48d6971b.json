@@ -1,0 +1,12 @@
+{
+  "source": "27_png_jpg.rf.2bb853b3c78191ce7dd0c90e48d6971b.jpg",
+  "invoice_number": "25",
+  "fingerprint": "9586bc484e6946fed6dd699af544b3975d7c78ff",
+  "fields": {
+    "invoice_number": "25",
+    "invoice_date": "1/03/2017",
+    "total_amount": "10,60",
+    "supplier": "Boston Tea",
+    "currency": "USD"
+  }
+}

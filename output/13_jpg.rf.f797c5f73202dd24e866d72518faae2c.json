@@ -1,0 +1,58 @@
+{
+  "invoice_number": "20001",
+  "invoice_date": "23.02.2016",
+  "total_amount": "18.22",
+  "supplier": "Demo GmbH",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 1,
+      "description": "W",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 2,
+      "description": "H",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 4,
+      "description": "L",
+      "unit_price": "1",
+      "line_total": "1"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.9
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "J\n1\nW\n1\n1\nHi\nHh\nHi\n1\nIle < 2\nH\n1\n1\n8\n3\n4\nL\n1\n1\n1\nL\n[\nW\nL\n@\n1!",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/13_jpg.rf.f797c5f73202dd24e866d72518faae2c.jpg",
+  "corrections": {
+    "source": "13_jpg.rf.f797c5f73202dd24e866d72518faae2c.jpg",
+    "fields": {
+      "invoice_number": "20001",
+      "invoice_date": "23.02.2016",
+      "total_amount": "18.22",
+      "supplier": "Demo GmbH",
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.450030503059014,
+  "total_is_guess": false
+}

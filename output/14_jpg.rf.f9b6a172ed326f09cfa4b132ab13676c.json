@@ -1,0 +1,41 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": "432.00",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.9,
+    "supplier": 0.0,
+    "currency": 0.9,
+    "line_items": 0.3
+  },
+  "route": "review",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "supplier missing",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "My Company name\nInvoice\nMy company slogan\nleles\nSeptember\n2013\nInvcce\nOOOC)\nInsert Your\nCuecmei ID\n[ABC 12345]\nPurchasc\nUrcor #\n12345578\nPayment Due by:\nOctotar\n2013\nBIII To:\nShip To (I Diflerent):\n[Namc]\n[Namc]\n[Company Namel\n(Company Namel\nIstree: _\n[Streel\n[City. ST\nCode]\n[City\nST ZIP Codc]\nAPhcne]\n[Phonel\nDescrption\nLino Tolnl\nPrinting and Binding (160*S1,75/each)\n280 00\nA4 Printing\n(10*515.20/5*500 Sheots)\n152.00\nSpeclal Notes\nInstructions\nSublolal\n432.00\nSales Tax Rate\nSales Tax\nS&H\nDigcount\nTotal\n432.00\nMake all checks payable\nMv Comoanv narc\nThank you for your businessl\nShould ycu\nMavC &ny enquincs conccinino\nthis invoicc\nplcasc cunlacl Jonn\nDoc on 0-00o-Ouu-Oooo\nStreel , Town/City, County. ST, O0000\nTel: 0-000-0Oo-0OCD Fax: 0-CO0-O0O-OOOO E-mail: info@yourcompanysite com Web: Www yourcompanysile com\nLogo\nAsdless]\nAdare?9|\nPapor",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/14_jpg.rf.f9b6a172ed326f09cfa4b132ab13676c.jpg",
+  "corrections": {
+    "source": "14_jpg.rf.f9b6a172ed326f09cfa4b132ab13676c.jpg",
+    "fields": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "total_amount": "432.00",
+      "supplier": null,
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.6158374506325918,
+  "total_is_guess": false
+}

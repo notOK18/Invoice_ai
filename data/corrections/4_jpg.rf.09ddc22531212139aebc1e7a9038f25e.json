@@ -1,0 +1,12 @@
+{
+  "source": "4_jpg.rf.09ddc22531212139aebc1e7a9038f25e.jpg",
+  "invoice_number": "2021.0001",
+  "fingerprint": "ff64b9dc1f7289d306efe89ba64e916023ed738d",
+  "fields": {
+    "invoice_number": "2021.0001",
+    "invoice_date": "2021-01-01",
+    "total_amount": "122.38",
+    "supplier": null,
+    "currency": "USD"
+  }
+}

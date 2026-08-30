@@ -1,0 +1,39 @@
+{
+  "invoice_number": "743",
+  "invoice_date": "2016-11-30",
+  "total_amount": "98.50",
+  "supplier": "Rechnung",
+  "currency": "EUR",
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.95,
+    "total_amount": 0.3,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.3
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "total_amount is a guess - no pattern matched",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "Rechnungsnummer 743\nRechnungsdatum: 30.11.2016\nLieferdatum: 30.11.2016\nPHP-Einfach de\nNIls Reimers\nwww php-elnfachde\nRechnung\nMax Musterman\nMusterstraBe 17\n12345 Musterstadt\nBezeichnung\nMenge\nEinzelpreis\nPreis\nProdukt\n42,50 Euro\n42,50 Euro\nProdukt 2\n5,20 Euro\n26,00 Euro\nProdukt 3\n10,00 Euro\n30,00 Euro\nGesamtsumme:\n98,50 Euro\nNach\n19 Abs\nUStG wird keine Umsatzsteuer berechnet:\nWir bitten um elne\nleichung der Rechnung innerhalb von 14 Tagen nach Erhalt: Bitte Uberweisen\nSie den vollstandigen Betrag an:\nEmpfanger: Meine Firma\nIBAN: DE8S 745165 45214 12364\nBIC: C46X453AD\nBeg",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/5_jpg.rf.6f26ccd1fd7752ba63ac7509176e0420.jpg",
+  "corrections": {
+    "source": "5_jpg.rf.6f26ccd1fd7752ba63ac7509176e0420.jpg",
+    "fields": {
+      "invoice_number": "743",
+      "invoice_date": "2016-11-30",
+      "total_amount": "98.50",
+      "supplier": "Rechnung",
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.8565979026167815,
+  "total_is_guess": true
+}

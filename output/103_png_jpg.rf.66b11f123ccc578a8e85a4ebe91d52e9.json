@@ -1,0 +1,53 @@
+{
+  "invoice_number": "IN-001",
+  "invoice_date": "29/01/2019",
+  "total_amount": "13715.00",
+  "supplier": "Pniaya Chopra",
+  "currency": "INR",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "Gandnimouze Pad",
+      "unit_price": "99",
+      "line_total": "00"
+    },
+    {
+      "quantity": 0,
+      "description": "8ublolal",
+      "unit_price": "12",
+      "line_total": "246.00"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.3,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.8
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "total_amount is a guess - no pattern matched",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "invoice\nLogo\nFROM\nINVOICE\nIN-001\nSamton\nDozian\nINVOICE\nDATE\n2901/2049\nNamrin\n3d0\n2430/2019\nDelni, Dolhl 400077\nOUE\nDATE\n20/0d/7019\nBILL\nTO\nSHIP\nTO\nKadicom\nMannan\nKaundo\nHannin\n27 .DIi Cilly. Gupta\n204,\nAbdul Rchman\ncni\nDolhi 40007\nRmanBnar Anmy\nOTY\nDESCRIPTION\nUNIT\nPRICE\nAMOUNT\nFrontcnd dcron\n9,409.00\n9.H.0o\n(uehOreirAnlDacrnoa\n975 00\n1.050.00\nGandnimouze Pad\n99 00\n207 00\n8ublolal\n12 246.00\n637 1207-\n469-52\nTOTAL\nK13,715.52\nRRChp)\nTERMS\nCONDITIONS\nPaymcnt\nduc wIinin\ndaya\nStalc Bank\nIndiz\nAccount Numbor: 12345678\nRoutlna Number 09076343210",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/103_png_jpg.rf.66b11f123ccc578a8e85a4ebe91d52e9.jpg",
+  "corrections": {
+    "source": "103_png_jpg.rf.66b11f123ccc578a8e85a4ebe91d52e9.jpg",
+    "fields": {
+      "invoice_number": "IN-001",
+      "invoice_date": "29/01/2019",
+      "total_amount": "13715.00",
+      "supplier": "Pniaya Chopra",
+      "currency": "INR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.5765214839684509,
+  "total_is_guess": true
+}

@@ -1,0 +1,33 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": null,
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.03,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.0,
+    "line_items": 0.264
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing",
+    "currency missing",
+    "no line items detected"
+  ],
+  "raw_text": "1\n3\n1",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/Invoice_28_affine_translation_jpg.rf.c03933cb5c670db2ed2711bdbcd2419b.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.65357902536973,
+  "total_is_guess": false
+}

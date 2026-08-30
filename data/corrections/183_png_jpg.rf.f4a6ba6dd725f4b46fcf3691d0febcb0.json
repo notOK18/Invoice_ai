@@ -1,0 +1,12 @@
+{
+  "source": "183_png_jpg.rf.f4a6ba6dd725f4b46fcf3691d0febcb0.jpg",
+  "invoice_number": "12345",
+  "fingerprint": "55616a8544f86a9921ec2d58b902cf21064f89ee",
+  "fields": {
+    "invoice_number": "12345",
+    "invoice_date": "18,05,2019",
+    "total_amount": "2995",
+    "supplier": null,
+    "currency": "USD"
+  }
+}

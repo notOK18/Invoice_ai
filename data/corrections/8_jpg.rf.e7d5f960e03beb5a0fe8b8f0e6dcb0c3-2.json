@@ -1,0 +1,12 @@
+{
+  "source": "8_jpg.rf.e7d5f960e03beb5a0fe8b8f0e6dcb0c3-2.jpg",
+  "invoice_number": null,
+  "fingerprint": "01234c8772a88d8dfe53367c3034e8185751f4ae",
+  "fields": {
+    "invoice_number": null,
+    "invoice_date": "3.01.2017",
+    "total_amount": "114.70",
+    "supplier": null,
+    "currency": "EUR"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "invoice_number": "25",
+  "invoice_date": "1/03/2017",
+  "total_amount": "10,60",
+  "supplier": "Boston Tea",
+  "currency": "USD",
+  "line_items": [],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.3
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "INVOICE\nBoston Tea Enterprises, Inc:\nDBA: Boston Tea Company\n3560 Wvest Market Ave\nAkron_0H 44333\n(330) 455-9218\nInvoice\nBenjamin Franklin\nDate:\n1no17\n457 Main SL\nTarpon Springs, FL 34655\nDue Date:\n132017\nDESCRIPTION\nQUANTITY\nPRICE\nSALES TAX\nAHOuUNT\nBlack Tea\n2.00\nS5.00\nYes\nM10.00\nSUBTOTAL:\n510.00\nLIBERTY COUNTY SALES TAX\n6%:\nS0 60\nTOTAL:\n510.60\nBALANCE DUE:\n510,60",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/27_png_jpg.rf.2bb853b3c78191ce7dd0c90e48d6971b.jpg",
+  "corrections": {
+    "source": "27_png_jpg.rf.2bb853b3c78191ce7dd0c90e48d6971b.jpg",
+    "fields": {
+      "invoice_number": "25",
+      "invoice_date": "1/03/2017",
+      "total_amount": "10,60",
+      "supplier": "Boston Tea",
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.7097869439126802,
+  "total_is_guess": false
+}

@@ -1,0 +1,12 @@
+{
+  "source": "9_jpg.rf.9d00f2737a152b7e6838359d338089f0-2.jpg",
+  "invoice_number": null,
+  "fingerprint": "c90b92dbe72047de4ea1adf7c195472fcffd1f47",
+  "fields": {
+    "invoice_number": null,
+    "invoice_date": "12.06.2007",
+    "total_amount": "223.12",
+    "supplier": "Supershop Zambrowsky",
+    "currency": "EUR"
+  }
+}

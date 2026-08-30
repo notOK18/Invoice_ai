@@ -1,0 +1,12 @@
+{
+  "source": "24_png_jpg.rf.da9db62bdf8dcf1d417b20e1d15066e7.jpg",
+  "invoice_number": null,
+  "fingerprint": "63460cdc8ff9726e920bd3374cd98842ddace814",
+  "fields": {
+    "invoice_number": null,
+    "invoice_date": "18,10,2020",
+    "total_amount": "417.00",
+    "supplier": "TAX INVOICE",
+    "currency": "USD"
+  }
+}

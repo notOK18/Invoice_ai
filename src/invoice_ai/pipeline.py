@@ -107,10 +107,14 @@ ROTATION_RETRY_BELOW = 0.60
 # common case. Stop as soon as one reads clearly, so the full sweep is rare.
 ORIENTATIONS_TRIED = [180, 90, 270, 0]
 ORIENTATION_GOOD_ENOUGH = 0.75
+# Below this, try harder renderings of the page (contrast, threshold).
+PREPROCESS_RETRY_BELOW = 0.75
 
-# Currency assumed when a document shows no symbol or wording at all.
-# Set to None to leave it empty instead (every such invoice is then flagged).
-DEFAULT_CURRENCY = "USD"
+# Currency assumed when a document shows no symbol or wording at all. None means
+# make no assumption: a currency is only reported when the document actually
+# shows one, so the field is left empty and the invoice flagged rather than
+# labelled with a guess that could be confidently wrong.
+DEFAULT_CURRENCY = None
 
 SUPPORTED_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tiff", ".bmp", ".gif", ".avif", ".webp"}
 
@@ -320,6 +324,31 @@ class InvoiceProcessor:
         mean = sum(confidences) / len(confidences) if confidences else None
         return "\n".join(lines), mean
 
+    def _prepared_image(self, image):
+        """The page upscaled and straightened, or None if it cannot be prepared."""
+        try:
+            from . import preprocess
+            return preprocess.prepare(image)
+        except Exception:
+            return None      # preprocessing is an optimisation, never a blocker
+
+    def _best_variant(self, reader, image, text, confidence):
+        """OCR several renderings of the page and keep whichever reads best."""
+        try:
+            from . import preprocess
+            candidates = preprocess.variants(image)
+        except Exception:
+            return text, confidence
+        best = (text, confidence)
+        for _, rendering in candidates:
+            try:
+                candidate_text, candidate_conf = self._read_results(reader.readtext(rendering))
+            except Exception:
+                continue
+            if candidate_conf and candidate_conf > (best[1] or 0):
+                best = (candidate_text, candidate_conf)
+        return best
+
     def _best_rotation(self, reader, image, text, confidence):
         """Re-read a badly-scoring page with the image itself reoriented.
 
@@ -362,7 +391,18 @@ class InvoiceProcessor:
         if self.ocr_backend == "easyocr":
             try:
                 reader = self._get_ocr_reader()
-                text, confidence = self._read_results(reader.readtext(image))
+                # Enlarge a small page and straighten it before reading. Cheap,
+                # needs no OCR to decide, and measurably lifts confidence on the
+                # low-resolution scans that fail most often.
+                prepared = self._prepared_image(image)
+                text, confidence = self._read_results(
+                    reader.readtext(prepared if prepared is not None else image))
+
+                # Still poor: try harder renderings of the page and keep the one
+                # that actually reads best. Which helps depends on the scan, so
+                # it is measured rather than assumed.
+                if confidence is not None and confidence < PREPROCESS_RETRY_BELOW:
+                    text, confidence = self._best_variant(reader, image, text, confidence)
 
                 # A rotated page still yields characters, but they are the wrong
                 # letters ("Total" upside down reads as "Iexol"), so the text is

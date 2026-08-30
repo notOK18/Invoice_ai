@@ -1,0 +1,60 @@
+{
+  "invoice_number": null,
+  "invoice_date": "3.01.2017",
+  "total_amount": "114.70",
+  "supplier": null,
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 2,
+      "description": "V",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "L",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "8"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.0,
+    "currency": 0.9,
+    "line_items": 0.9
+  },
+  "route": "review",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date could not be normalized",
+    "supplier missing",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "R3\n1\nQ\nIl\nWR\n1\n1\n1\nL\n|\nL\nii\nU\n1\n1\n1\n#\n2\nV\n1\n1\n1\nR3\n1\np\n1\nL\n1\n1\n1\n1\n1\n8\nWA\nI:\n3\n1\n33\nC:\n1\n1\nL\n1",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/8_jpg.rf.e7d5f960e03beb5a0fe8b8f0e6dcb0c3-2.jpg",
+  "corrections": {
+    "source": "8_jpg.rf.e7d5f960e03beb5a0fe8b8f0e6dcb0c3-2.jpg",
+    "fields": {
+      "invoice_number": null,
+      "invoice_date": "3.01.2017",
+      "total_amount": "114.70",
+      "supplier": null,
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.4115049559004296,
+  "total_is_guess": false
+}

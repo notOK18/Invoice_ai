@@ -1,0 +1,47 @@
+{
+  "invoice_number": null,
+  "invoice_date": "12.06.2007",
+  "total_amount": "223.12",
+  "supplier": "Supershop Zambrowsky",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "1",
+      "unit_price": "8",
+      "line_total": "06"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.7
+  },
+  "route": "review",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date could not be normalized",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "E\n00\n1\n8\n06\nL\nIL\n5\nF\nJH\n6\nV\n]\n6\n3\nM\n1\nM\n[\n08\n1\n|",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/9_jpg.rf.9d00f2737a152b7e6838359d338089f0-2.jpg",
+  "corrections": {
+    "source": "9_jpg.rf.9d00f2737a152b7e6838359d338089f0-2.jpg",
+    "fields": {
+      "invoice_number": null,
+      "invoice_date": "12.06.2007",
+      "total_amount": "223.12",
+      "supplier": "Supershop Zambrowsky",
+      "currency": "EUR"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.3012582307118258,
+  "total_is_guess": false
+}

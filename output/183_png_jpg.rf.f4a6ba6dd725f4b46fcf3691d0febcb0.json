@@ -1,0 +1,53 @@
+{
+  "invoice_number": "12345",
+  "invoice_date": "18,05,2019",
+  "total_amount": "2995",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 2200,
+      "description": "USD",
+      "unit_price": "100",
+      "line_total": "2700"
+    },
+    {
+      "quantity": 3,
+      "description": "18 May",
+      "unit_price": "2019",
+      "line_total": "2995"
+    }
+  ],
+  "review_required": false,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.95,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.0,
+    "currency": 0.9,
+    "line_items": 0.8
+  },
+  "route": "auto_approve",
+  "review_reasons": [
+    "invoice_date could not be normalized",
+    "supplier missing",
+    "line-item totals do not match the invoice total",
+    "matched a saved correction"
+  ],
+  "raw_text": "IMVCICE\nDlomand\nConullne\nAdvise Accountants Inc_\nKnlolorbooo\nyntn\nWeatchurtar NY MOZ\nDATE ISSUED DECEMBER\n2019\ndlanondooneuting om\n7F\nNUMBER;\n4734 5\nLi _'_LFtn\nRArE\nHjUd-.\ncusTjA[\nWebsile\ndesign\n2200 USD\n100\n2700 USD\nLogo design\n795 USD\n795 USD\nI- -\nT_| A\nAccouni\n4944-3\n18 May 2019\n2995 USD\nUnited\nBank",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/183_png_jpg.rf.f4a6ba6dd725f4b46fcf3691d0febcb0.jpg",
+  "corrections": {
+    "source": "183_png_jpg.rf.f4a6ba6dd725f4b46fcf3691d0febcb0.jpg",
+    "fields": {
+      "invoice_number": "12345",
+      "invoice_date": "18,05,2019",
+      "total_amount": "2995",
+      "supplier": null,
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.43598101938641914,
+  "total_is_guess": false
+}

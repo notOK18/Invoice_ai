@@ -1,0 +1,40 @@
+{
+  "invoice_number": null,
+  "invoice_date": "18,10,2020",
+  "total_amount": "417.00",
+  "supplier": "TAX INVOICE",
+  "currency": "USD",
+  "line_items": [],
+  "review_required": true,
+  "confidence": 0.9,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.5,
+    "total_amount": 0.9,
+    "supplier": 0.75,
+    "currency": 0.9,
+    "line_items": 0.3
+  },
+  "route": "review",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date could not be normalized",
+    "no line items detected",
+    "matched a saved correction"
+  ],
+  "raw_text": "Thts _\nsample: irtvoyce gurerated by Chingelde\nTAX INVOICE\nWnydice\nN7-202021-4470\nInvoice Date\nOct 18. Zuzo\nAmount {417.00 (CAD)\nCustomir\nImbDWdBROcPSvB2\nPavmenr Terms\npon Rece\n2983741839\nUnitco Stutes\nDuba\nmaln roac\nPnaenix\nArizona 50045\nUnited Stares\nRILLFT\nSuaSCAIPTION\n5amuel\nI0 1GchoysBaVm NPBiB\nNext Billing Dale Jan 24, 2021\nDESCIUPTIOY\nAMOUNT (CAd\nCRM Standard Plan\nMonthly CAD\n5139.00\nOct2\nNoy /Ju\nCRM Standard Plan\nMonthly CAD\n9139.00\nCuJa\nCRM Standard Plan\nMonthly CAD\n9139.00\nDec 24.2020 (uJan 24 2021\nTotal\n5417.00\nPayments\n-3417,00\nAmount Due (CAD)\nSO.00\nPAYMENTS\n{417,00 was paid on 18 Ort; 2020 19-33 SST by Visa\nending 4242.\nJacob",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/24_png_jpg.rf.da9db62bdf8dcf1d417b20e1d15066e7.jpg",
+  "corrections": {
+    "source": "24_png_jpg.rf.da9db62bdf8dcf1d417b20e1d15066e7.jpg",
+    "fields": {
+      "invoice_number": null,
+      "invoice_date": "18,10,2020",
+      "total_amount": "417.00",
+      "supplier": "TAX INVOICE",
+      "currency": "USD"
+    }
+  },
+  "learned": true,
+  "ocr_confidence": 0.5593197264073292,
+  "total_is_guess": false
+}

@@ -1,0 +1,12 @@
+{
+  "source": "5_jpg.rf.6f26ccd1fd7752ba63ac7509176e0420.jpg",
+  "invoice_number": "743",
+  "fingerprint": "a6ea78ba8880cf68face5792d9f8cef4b3d7af64",
+  "fields": {
+    "invoice_number": "743",
+    "invoice_date": "2016-11-30",
+    "total_amount": "98.50",
+    "supplier": "Rechnung",
+    "currency": "EUR"
+  }
+}

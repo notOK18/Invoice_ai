@@ -1,0 +1,38 @@
+{
+  "invoice_number": null,
+  "invoice_date": "2021-12-11",
+  "total_amount": "20.00",
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 0,
+      "description": "Your description here",
+      "unit_price": "20.00",
+      "line_total": "20,00"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.395,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.864,
+    "total_amount": 0.273,
+    "supplier": 0.0,
+    "currency": 0.819,
+    "line_items": 0.637
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "total_amount is a guess - no pattern matched",
+    "supplier missing",
+    "line-item totals do not match the invoice total"
+  ],
+  "raw_text": "InvOICE\nYOUR COMPANY NAME HERE\nNo:\"47\nDate 12.11.2021\nYour name here\nAddress here\nBuilding name\nCountry:\nDESCRIPTION\nPRICE\nTOTAL\nYour description\nS2o,00.\nS2o.00\nYour description here_\ns20.00\nSz0.00\nYour description here\nS20.00\nS20,00\nSUBTOTAL:\nsoo.0o\nTAX\nSoo.oo\nTOTAL\nSoo,o0\nAccount no.\n'Phone\nName hiere\n23569874858\n(34).456 897.657\nPaymerit Method\nVisa;Mastercard\nhere\nTo:",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/2_jpg.rf.637afd43d00cde95667b7b9214c62b87-2.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.7413359783349581,
+  "total_is_guess": true
+}

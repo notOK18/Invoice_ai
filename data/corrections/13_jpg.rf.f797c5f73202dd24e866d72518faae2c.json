@@ -1,0 +1,12 @@
+{
+  "source": "13_jpg.rf.f797c5f73202dd24e866d72518faae2c.jpg",
+  "invoice_number": "20001",
+  "fingerprint": "228557c318059fffe87150e73630e0fb16d1c52d",
+  "fields": {
+    "invoice_number": "20001",
+    "invoice_date": "23.02.2016",
+    "total_amount": "18.22",
+    "supplier": "Demo GmbH",
+    "currency": "EUR"
+  }
+}

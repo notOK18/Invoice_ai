@@ -57,6 +57,7 @@ balanced accuracy on held-out folds. The UI shows which is in use per field.
 | path | role |
 |---|---|
 | `src/invoice_ai/pipeline.py` | OCR, extraction patterns, heuristic scoring |
+| `src/invoice_ai/preprocess.py` | image cleanup before OCR (also a standalone tool) |
 | `src/invoice_ai/confidence.py` | per-field features, learned scoring, retraining |
 | `src/invoice_ai/patterns.py` | inferring labels from corrections |
 | `src/invoice_ai/db.py` | SQLite store |
@@ -66,6 +67,33 @@ balanced accuracy on held-out folds. The UI shows which is in use per field.
 | `data/models/` | trained model per field (belongs with the database) |
 
 `LEARNING.md` covers the learning loop in more detail.
+
+## Image quality
+
+Resolution is the single biggest factor in whether extraction works. Measured
+across the sample invoices:
+
+| source image | OCR confidence | fields extracted |
+|---|---|---|
+| 640x640 (0.4 MP) | 0.68 | 2.0 / 3 |
+| 1432x2048 (2.9 MP) | 0.86 | **3.0 / 3** |
+
+Scanning at 300 DPI, or photographing with a phone, comfortably clears the
+second row. Preprocessing raises the confidence of a small scan but cannot
+recover detail that was never captured, so it is no substitute.
+
+The cleanup used before OCR is also a standalone tool:
+
+```bash
+export PYTHONPATH=src
+python -m invoice_ai.preprocess report  invoice.jpg   # size, skew, contrast
+python -m invoice_ai.preprocess clean   invoice.jpg out.png
+python -m invoice_ai.preprocess compare invoice.jpg   # OCR score per rendering
+```
+
+`compare` is the useful one when a page reads badly: it OCRs the original and
+each cleaned rendering and prints the confidence of each, so the choice is
+measured rather than guessed.
 
 ## Notes
 

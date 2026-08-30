@@ -1,0 +1,12 @@
+{
+  "source": "14_jpg.rf.f9b6a172ed326f09cfa4b132ab13676c.jpg",
+  "invoice_number": null,
+  "fingerprint": "f879fe5d293bad3b00dea95f4864cb938fd27263",
+  "fields": {
+    "invoice_number": null,
+    "invoice_date": null,
+    "total_amount": "432.00",
+    "supplier": null,
+    "currency": "USD"
+  }
+}

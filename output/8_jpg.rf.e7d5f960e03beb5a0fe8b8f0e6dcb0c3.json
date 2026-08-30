@@ -1,0 +1,51 @@
+{
+  "invoice_number": null,
+  "invoice_date": null,
+  "total_amount": null,
+  "supplier": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "quantity": 2,
+      "description": "V",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "L",
+      "unit_price": "1",
+      "line_total": "1"
+    },
+    {
+      "quantity": 1,
+      "description": "1",
+      "unit_price": "1",
+      "line_total": "8"
+    }
+  ],
+  "review_required": true,
+  "confidence": 0.192,
+  "field_confidence": {
+    "invoice_number": 0.0,
+    "invoice_date": 0.0,
+    "total_amount": 0.0,
+    "supplier": 0.0,
+    "currency": 0.715,
+    "line_items": 0.715
+  },
+  "route": "reject",
+  "review_reasons": [
+    "invoice_number missing",
+    "invoice_date missing",
+    "total_amount missing",
+    "supplier missing",
+    "low OCR confidence (0.41)"
+  ],
+  "raw_text": "R3\n1\nQ\nIl\nWR\n1\n1\n1\nL\n|\nL\nii\nU\n1\n1\n1\n#\n2\nV\n1\n1\n1\nR3\n1\np\n1\nL\n1\n1\n1\n1\n1\n8\nWA\nI:\n3\n1\n33\nC:\n1\n1\nL\n1",
+  "source_path": "/Users/omarkhodor/Invoice_ai/data/invoices/8_jpg.rf.e7d5f960e03beb5a0fe8b8f0e6dcb0c3.jpg",
+  "corrections": {},
+  "learned": false,
+  "ocr_confidence": 0.4115049559004296,
+  "total_is_guess": false
+}
