@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice AI Report</title>
+<style>
+  :root{
+    --ink:#15202b; --ink-2:#33414f; --muted:#5b6875; --faint:#8593a1;
+    --paper:#fbfcfd; --surface:#ffffff; --sunk:#f1f4f7; --line:#dde4ea;
+    --accent:#136a6f; --accent-soft:#e2f0f0;
+    --ok:#2f7d55; --ok-soft:#e4f1e9;
+    --part:#a8641d; --part-soft:#f8eddf;
+    --stop:#9e3d3d; --stop-soft:#f7e6e6;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ink:#e8eef4; --ink-2:#c3ced9; --muted:#95a3b1; --faint:#6f7d8b;
+      --paper:#101820; --surface:#16212b; --sunk:#1c2833; --line:#2a3843;
+      --accent:#5fbcc0; --accent-soft:#163234;
+      --ok:#6cc08d; --ok-soft:#162c21;
+      --part:#d69a52; --part-soft:#2e2317;
+      --stop:#d97b7b; --stop-soft:#2e1b1b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#e8eef4; --ink-2:#c3ced9; --muted:#95a3b1; --faint:#6f7d8b;
+    --paper:#101820; --surface:#16212b; --sunk:#1c2833; --line:#2a3843;
+    --accent:#5fbcc0; --accent-soft:#163234;
+    --ok:#6cc08d; --ok-soft:#162c21;
+    --part:#d69a52; --part-soft:#2e2317;
+    --stop:#d97b7b; --stop-soft:#2e1b1b;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 24px 96px;}
+  .col{max-width:68ch;}
+
+  header{border-bottom:1px solid var(--line); margin-bottom:40px; padding:56px 0 32px;}
+  .eyebrow{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+  }
+  h1{
+    font-size:clamp(30px,5vw,42px); line-height:1.12; letter-spacing:-.022em;
+    margin:0 0 14px; text-wrap:balance; font-weight:660;
+  }
+  .standfirst{font-size:18px; color:var(--ink-2); margin:0; max-width:60ch;}
+
+  h2{
+    font-size:21px; letter-spacing:-.012em; margin:52px 0 6px;
+    text-wrap:balance; font-weight:650;
+    padding-top:20px; border-top:1px solid var(--line);
+  }
+  h2:first-of-type{border-top:none; padding-top:0;}
+  h3{font-size:15.5px; margin:28px 0 6px; font-weight:650; letter-spacing:-.005em;}
+  p{margin:0 0 16px;}
+  .lede{color:var(--muted); margin:0 0 26px; max-width:66ch;}
+  strong{font-weight:640;}
+  code{
+    font-family:var(--mono); font-size:.88em; background:var(--sunk);
+    padding:1px 5px; border-radius:4px; color:var(--ink-2);
+  }
+
+  /* headline metrics */
+  .metrics{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line);
+    border-radius:10px; overflow:hidden; margin:34px 0 8px;
+  }
+  .metric{background:var(--surface); padding:16px 18px;}
+  .metric .n{
+    font-family:var(--mono); font-size:26px; font-weight:600;
+    letter-spacing:-.02em; font-variant-numeric:tabular-nums; display:block;
+  }
+  .metric .k{
+    font-size:12px; color:var(--muted); margin-top:3px; display:block;
+  }
+
+  /* tables */
+  .scroll{overflow-x:auto; margin:20px 0 8px;}
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:460px;}
+  caption{
+    caption-side:top; text-align:left; font-family:var(--mono); font-size:11.5px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+    padding-bottom:9px;
+  }
+  th{
+    text-align:left; font-weight:600; font-size:12.5px; color:var(--muted);
+    border-bottom:1px solid var(--line); padding:0 14px 8px 0;
+  }
+  td{padding:9px 14px 9px 0; border-bottom:1px solid var(--line); vertical-align:top;}
+  td.num, th.num{
+    font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right;
+    padding-right:0; white-space:nowrap;
+  }
+  tr:last-child td{border-bottom:none;}
+
+  /* bar inside a table cell */
+  .bar{
+    display:block; height:5px; border-radius:3px; background:var(--sunk);
+    min-width:74px; margin-top:7px; overflow:hidden;
+  }
+  .bar i{display:block; height:100%; border-radius:3px; background:var(--accent);}
+  .bar.is-low i{background:var(--stop);}
+  .bar.is-mid i{background:var(--part);}
+
+  /* status chips */
+  .chip{
+    display:inline-block; font-family:var(--mono); font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; padding:3px 8px;
+    border-radius:999px; white-space:nowrap; font-weight:600;
+  }
+  .chip.ok{background:var(--ok-soft); color:var(--ok);}
+  .chip.part{background:var(--part-soft); color:var(--part);}
+  .chip.stop{background:var(--stop-soft); color:var(--stop);}
+
+  /* finding blocks */
+  .finding{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:10px; padding:18px 20px; margin:16px 0;
+  }
+  .finding-head{
+    display:flex; gap:12px; align-items:baseline;
+    justify-content:space-between; margin-bottom:8px;
+  }
+  .finding-head h3{margin:0;}
+  .finding p{margin:0 0 10px; color:var(--ink-2); font-size:15px;}
+  .finding p:last-child{margin-bottom:0;}
+  .why{
+    font-size:14px; color:var(--muted); border-left:2px solid var(--line);
+    padding-left:14px; margin:10px 0 0;
+  }
+  .why b{color:var(--ink-2); font-weight:600;}
+
+  /* recommendations */
+  ol.recs{list-style:none; counter-reset:r; padding:0; margin:20px 0 0;}
+  ol.recs li{
+    counter-increment:r; position:relative; padding:0 0 22px 46px;
+    border-bottom:1px solid var(--line); margin-bottom:22px;
+  }
+  ol.recs li:last-child{border-bottom:none;}
+  ol.recs li::before{
+    content:counter(r); position:absolute; left:0; top:1px;
+    font-family:var(--mono); font-size:12px; font-weight:600; color:var(--accent);
+    background:var(--accent-soft); width:28px; height:28px; border-radius:8px;
+    display:grid; place-items:center;
+  }
+  ol.recs h3{margin:0 0 5px;}
+  ol.recs p{margin:0; color:var(--ink-2); font-size:15px;}
+  .effort{
+    font-family:var(--mono); font-size:11px; color:var(--faint);
+    letter-spacing:.06em; text-transform:uppercase; margin-top:7px; display:block;
+  }
+
+  footer{
+    margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
+    font-size:13.5px; color:var(--faint);
+  }
+  a{color:var(--accent);}
+  a:focus-visible, li:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Project report</p>
+  <h1>Invoice AI</h1>
+  <p class="standfirst">
+    An invoice extraction pipeline that scores its own reliability and learns from
+    reviewer corrections. What was built, what it measures, what remains blocked,
+    and where the effort should go next.
+  </p>
+</header>
+
+<div class="metrics">
+  <div class="metric"><span class="n">99%</span><span class="k">Totals extracted correctly</span></div>
+  <div class="metric"><span class="n">0.99</span><span class="k">Best model balanced accuracy</span></div>
+  <div class="metric"><span class="n">414</span><span class="k">Annotated invoices benchmarked</span></div>
+  <div class="metric"><span class="n">2 of 5</span><span class="k">Fields on trained models</span></div>
+</div>
+
+<div class="col">
+
+<h2>What the system does</h2>
+<p class="lede">
+  An invoice arrives as an image or text file. The system reads it, pulls out the
+  fields accounting needs, and — the part that matters — states how much each one
+  should be trusted.
+</p>
+<p>
+  Fields scoring at or above <strong>90% confidence</strong> are auto-approved; anything below is
+  flagged for a human. Every review then feeds back in: whether a reviewer accepted a
+  field untouched or corrected it becomes a training label, so the scores sharpen with use.
+</p>
+<p>
+  Three things are learned from a single correction. The corrected <strong>value</strong> is remembered
+  and reapplied when that document reappears, matched by a content fingerprint rather than
+  filename. The <strong>label sitting beside it</strong> — <code>Gesamtbetrag</code>, say — becomes a
+  candidate extraction pattern, adopted after three independent confirmations. And the
+  <strong>accept-or-edit decision</strong> retrains that field's confidence model.
+</p>
+
+<h2>Measured results</h2>
+<p class="lede">
+  All figures below come from running the extractor over 414 annotated invoices and
+  comparing against ground truth — not from confidence scores, which proved a poor
+  proxy for correctness.
+</p>
+
+<div class="scroll">
+<table>
+  <caption>Extraction accuracy by field</caption>
+  <thead>
+    <tr><th>Field</th><th class="num">Correct</th><th class="num">Rate</th><th>Scored by</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Invoice number<span class="bar"><i style="width:99%"></i></span></td>
+      <td class="num">412 / 414</td><td class="num">99%</td>
+      <td><span class="chip part">Heuristic</span></td>
+    </tr>
+    <tr>
+      <td>Total amount<span class="bar"><i style="width:99%"></i></span></td>
+      <td class="num">411 / 414</td><td class="num">99%</td>
+      <td><span class="chip part">Heuristic</span></td>
+    </tr>
+    <tr>
+      <td>Invoice date<span class="bar is-mid"><i style="width:81%"></i></span></td>
+      <td class="num">336 / 414</td><td class="num">81%</td>
+      <td><span class="chip ok">Model v1</span></td>
+    </tr>
+    <tr>
+      <td>Supplier<span class="bar is-low"><i style="width:26%"></i></span></td>
+      <td class="num">110 / 414</td><td class="num">26%</td>
+      <td><span class="chip ok">Model v2</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+  The total began at <strong>1%</strong>. It reached 99% once the extractor learned to find the
+  summary block and confirm the figure against the invoice's own arithmetic — that
+  subtotal plus tax equals the amount billed. That self-check turned out to be the
+  strongest signal in the project, and it needs no machine learning at all.
+</p>
+
+<div class="scroll">
+<table>
+  <caption>Confidence models in service</caption>
+  <thead>
+    <tr><th>Model</th><th class="num">Training rows</th><th class="num">Failures seen</th><th class="num">Balanced accuracy</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Invoice date <code>v1</code></td><td class="num">414</td><td class="num">78</td><td class="num">1.00</td></tr>
+    <tr><td>Supplier <code>v2</code></td><td class="num">414</td><td class="num">304</td><td class="num">0.99</td></tr>
+  </tbody>
+</table>
+</div>
+<p>
+  Both figures are cross-validated on held-out folds. A model only replaces the
+  hand-written scoring if it clears <strong>0.65 balanced accuracy</strong> there — a gate that has
+  already done its job, rejecting a total-amount model that scored 0.019 and would have
+  flagged nearly every correct invoice.
+</p>
+
+<h2>What could not be done, and why</h2>
+<p class="lede">
+  Four things were attempted and did not work. In each case the reason is worth more
+  than the attempt.
+</p>
+
+<div class="finding">
+  <div class="finding-head">
+    <h3>Supplier extraction stayed at 26%</h3>
+    <span class="chip stop">Unresolved</span>
+  </div>
+  <p>
+    Every other field has an anchor: a keyword, a format, or arithmetic. A supplier name
+    has none — the extractor takes whatever text follows <code>Bill To:</code> or
+    <code>Seller:</code>, which on a two-column layout is frequently the adjacent column
+    header rather than a company.
+  </p>
+  <p class="why">
+    <b>Why it matters:</b> supplier is weighted Very High, so its weakness pushes almost
+    every invoice into review. The confidence model correctly learned to distrust the
+    field — which is honest, but does not reduce the review workload.
+  </p>
+</div>
+
+<div class="finding">
+  <div class="finding-head">
+    <h3>Two fields never earned a trained model</h3>
+    <span class="chip part">Blocked by data</span>
+  </div>
+  <p>
+    Invoice number and total amount still use hand-written scores. The cause is
+    counter-intuitive: extraction is <em>too reliable</em>. Across 414 invoices they failed
+    only 2 and 3 times respectively — far below the 5 failures per class a model needs to
+    learn any separation.
+  </p>
+  <p class="why">
+    <b>Why it matters:</b> the learning loop is sound, but a confidence model needs
+    mistakes to learn from. These fields will stay on heuristics until real reviews supply
+    genuine failures — which public datasets cannot.
+  </p>
+</div>
+
+<div class="finding">
+  <div class="finding-head">
+    <h3>Image preprocessing raised confidence but not accuracy</h3>
+    <span class="chip stop">Dead end</span>
+  </div>
+  <p>
+    A preprocessing tool was built — upscaling, deskew from text-line angle, contrast
+    equalisation, denoise. It lifted OCR confidence substantially on poor scans
+    (<code>0.54 → 0.75</code>). Extraction did not improve, and on one invoice it made the
+    result worse.
+  </p>
+  <p class="why">
+    <b>Why:</b> the failing scans carry text <b>8 pixels tall</b>, where OCR needs roughly
+    20–25. Enlarging interpolates — it makes characters bigger, not clearer. The
+    information distinguishing a <code>2</code> from a <code>7</code> was destroyed when the
+    image was captured, and nothing downstream recovers it. Higher confidence on unchanged
+    text simply means the model is more certain of the same reading.
+  </p>
+</div>
+
+<div class="finding">
+  <div class="finding-head">
+    <h3>No spatial understanding of the page</h3>
+    <span class="chip part">By design</span>
+  </div>
+  <p>
+    The OCR engine returns a bounding box for every text region; the pipeline discards
+    them and works purely on text. Layouts that place a value with no adjacent label —
+    a total alone in a box top-right — cannot be handled.
+  </p>
+  <p class="why">
+    <b>Why it stands:</b> using position requires a layout-aware document model, which is a
+    substantially different system. The text-only approach reached 99% on two fields, so
+    the cost was not yet justified.
+  </p>
+</div>
+
+<h3>The constraint underneath all of it</h3>
+<p>
+  Every extraction failure traced back to one variable. Resolution predicts success almost
+  perfectly:
+</p>
+
+<div class="scroll">
+<table>
+  <caption>Source resolution against outcome</caption>
+  <thead>
+    <tr><th>Source image</th><th class="num">Text height</th><th class="num">OCR confidence</th><th class="num">Fields extracted</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>640 × 640 &nbsp;<span class="chip stop">Fails</span></td><td class="num">8 px</td><td class="num">0.68</td><td class="num">2.0 / 3</td></tr>
+    <tr><td>1432 × 2048 &nbsp;<span class="chip ok">Works</span></td><td class="num">26 px</td><td class="num">0.86</td><td class="num">3.0 / 3</td></tr>
+  </tbody>
+</table>
+</div>
+<p>
+  Invoices captured at normal resolution extract <strong>completely</strong>. The low-resolution
+  images are an artefact of the public dataset used for testing, not of real documents —
+  which makes this the cheapest problem on the list to eliminate.
+</p>
+
+<h2>Recommendations</h2>
+<p class="lede">
+  Ordered by return on effort. The first two require no code and would resolve more
+  uncertainty than anything else on the list.
+</p>
+
+<ol class="recs">
+  <li>
+    <h3>Capture invoices at full resolution</h3>
+    <p>
+      A phone photo (~12 MP) or a 300 DPI scan puts text far past the 26-pixel threshold
+      where the system already extracts every field. This removes the binding constraint
+      behind every failure observed so far.
+    </p>
+    <span class="effort">No code · immediate effect</span>
+  </li>
+  <li>
+    <h3>Run twenty real invoices through the review app</h3>
+    <p>
+      Everything measured so far used public datasets — synthetic templates and
+      low-resolution photographs. Real documents would establish true accuracy, generate
+      the failure examples the remaining models need, and reveal which layouts require
+      new patterns.
+    </p>
+    <span class="effort">No code · unblocks three of the findings above</span>
+  </li>
+  <li>
+    <h3>Rebuild supplier extraction</h3>
+    <p>
+      The weakest field and the largest single source of unnecessary review. Rather than
+      taking text adjacent to a keyword, identify candidate company names by their form —
+      legal suffixes, position in the header block — and validate against suppliers already
+      known from past corrections.
+    </p>
+    <span class="effort">Focused engineering · reduces review volume</span>
+  </li>
+  <li>
+    <h3>Move the database to private hosting before real invoices</h3>
+    <p>
+      The store keeps the OCR text of every document processed. Today that content comes
+      from public datasets, so nothing sensitive is exposed; the moment real invoices flow
+      through it, it will hold genuine bank and tax identifiers. A private repository, and
+      a hosted database once more than one reviewer is involved.
+    </p>
+    <span class="effort">Configuration · required before production use</span>
+  </li>
+  <li>
+    <h3>Consider a layout-aware model only if the above is insufficient</h3>
+    <p>
+      A document model such as LayoutLM uses position as well as text and would handle
+      unlabelled values. It is the correct answer to the spatial limitation — but it needs
+      annotated data, greater compute, and is only justified once resolution and real-world
+      testing have been exhausted.
+    </p>
+    <span class="effort">Substantial · defer until evidence demands it</span>
+  </li>
+</ol>
+
+<h2>Assessment</h2>
+<p>
+  The pipeline reaches <strong>99% accuracy</strong> on the two highest-weighted fields and the
+  learning loop is verified end to end — reviews are recorded, models retrain, and new
+  layouts are absorbed from corrections without code changes. The quality gate has
+  demonstrably prevented a bad model from reaching production.
+</p>
+<p>
+  Its limits are equally clear, and they are mostly not modelling limits. Supplier
+  extraction needs engineering, not data. Two fields need real failures before they can be
+  learned. And the majority of observed errors would disappear with better source images.
+  The most valuable next step is not a change to the system but twenty real invoices
+  passed through it.
+</p>
+
+<footer>
+  Python · EasyOCR/PyTorch · scikit-learn · OpenCV · SQLite &nbsp;·&nbsp;
+  3,724 lines · 13 tests passing &nbsp;·&nbsp;
+  <a href="https://github.com/notOK18/Invoice_ai">github.com/notOK18/Invoice_ai</a>
+</footer>
+
+</div>
+</div>
+</body>
+</html>
